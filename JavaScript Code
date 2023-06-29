@@ -1,0 +1,11 @@
+function order(words){
+  let wordsArr = words.split(' ').sort();
+  let answer = [];
+  for (let i = 0; i < wordsArr.length; i++) {
+    for (let j = 0; j < wordsArr[i].length; j++)
+      if (wordsArr[i].charCodeAt(j) >= 49 && wordsArr[i].charCodeAt(j) <= 57) {
+        answer[wordsArr[i].charCodeAt(j)-49] = wordsArr[i];
+    }
+  }
+  return answer.join(' ');
+}
